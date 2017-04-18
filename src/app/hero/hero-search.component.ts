@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
-import { HeroSearchService } from './hero-search.service';
 import { Hero } from './hero';
+import { HeroSearchService } from './hero-search.service';
 
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
