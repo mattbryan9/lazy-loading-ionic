@@ -19,10 +19,9 @@ import { HeroSearchComponent } from './hero-search.component';
 import { TitleComponent } from './title.component';
 import { UserService } from './user.service';
 import { HighlightDirective } from './highlight.directive';
-import { AwesomePipe } from './contact/awesome.pipe';
-import { ContactComponent } from './contact/contact.component';
-import { HighlightDirective as ContactHighlightDirective } from './contact/highlight.directive';
-import { ContactService } from './contact/contact.service';
+
+/* Contact Imports */
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   imports: [
@@ -30,7 +29,8 @@ import { ContactService } from './contact/contact.service';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    ContactModule
   ],
   declarations: [
     AppComponent,
@@ -40,12 +40,8 @@ import { ContactService } from './contact/contact.service';
     HeroSearchComponent,
     HighlightDirective,
     TitleComponent,
-
-    AwesomePipe,
-    ContactComponent,
-    ContactHighlightDirective
   ],
-  providers: [ HeroService, UserService, ContactService ],
+  providers: [ HeroService, UserService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
