@@ -4,6 +4,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 /** Precede the input with the word "Awesome" */
 export class AwesomePipe implements PipeTransform {
   transform(phrase: string) {
-    return phrase ? 'Awesome' + phrase : '';
+    return phrase ? 'Awesome ' + phrase : '';
   }
 }

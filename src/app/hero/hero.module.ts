@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
+import { SharedModule } from '../shared/shared.module';
 import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent as HeroListComponent } from './heroes.component';
-import { HighlightDirective } from './highlight.directive';
 import { HeroService } from './hero.service';
 
 import { HeroSearchComponent } from './hero-search.component';
@@ -18,8 +16,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
+    SharedModule,
     HttpModule,
     HeroRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
@@ -28,8 +25,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
     HeroComponent,
     HeroDetailComponent,
     HeroSearchComponent,
-    HeroListComponent,
-    HighlightDirective
+    HeroListComponent
   ],
   providers: [ HeroService ]
 })

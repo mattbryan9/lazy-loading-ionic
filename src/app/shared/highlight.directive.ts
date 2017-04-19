@@ -6,6 +6,6 @@ export class HighlightDirective {
   constructor(el: ElementRef) {
     el.nativeElement.style.backgroundColor = 'powderblue';
     console.log(
-      `* Contact highlight called for ${el.nativeElement.tagName}`);
+      `* Shared highlight called for ${el.nativeElement.tagName}`);
   }
 }
