@@ -1,30 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent as HeroListComponent } from './heroes.component';
 import { HighlightDirective } from './highlight.directive';
 import { HeroService } from './hero.service';
-import { RouterModule, Routes} from '@angular/router';
-import {HeroSearchComponent} from "./hero-search.component";
 
+import { HeroSearchComponent } from './hero-search.component';
+import { HeroRoutingModule } from './hero-routing.module';
 
-const routes: Routes = [
-  { path: '', component: HeroComponent,
-    children: [
-      { path: '',    component: HeroListComponent },
-      { path: ':id', component: HeroDetailComponent }
-    ]
-  }
-];
+// Imports for loading & configuring the in-memory web api
+import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes)
+    HttpModule,
+    HeroRoutingModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   declarations: [
     HeroComponent,

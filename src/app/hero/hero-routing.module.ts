@@ -10,7 +10,8 @@ const routes: Routes = [
     component: HeroComponent,
     children: [
       { path: '',    component: HeroListComponent },
-      { path: ':id', component: HeroDetailComponent }
+      { path: ':id', component: HeroDetailComponent },
+      { path: 'detail/:id', component: HeroDetailComponent }
     ]
   }
 ];

@@ -13,16 +13,11 @@ import { ContactModule } from './contact/contact.module';
 /* Routing Module */
 import { AppRoutingModule } from './app-routing.module';
 
-// Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
-
 @NgModule({
   imports: [
     BrowserModule,
     ContactModule,
-    AppRoutingModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    AppRoutingModule
   ],
   providers: [ UserService ],
   declarations: [

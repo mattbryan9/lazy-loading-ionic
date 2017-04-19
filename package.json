@@ -28,6 +28,7 @@
     "@angular/compiler-cli": "^4.0.2",
     "@types/jasmine": "2.5.36",
     "@types/node": "^6.0.46",
+    "angular-router-loader": "^0.6.0",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.4",
     "canonical-path": "0.0.2",
