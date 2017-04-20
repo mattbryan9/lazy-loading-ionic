@@ -1,6 +1,6 @@
 h1 {
   font-size: 1.2em;
-  color: #999;
+  color: #999999;
   margin-bottom: 0;
 }
 h2 {
@@ -13,7 +13,7 @@ nav a {
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
-  background-color: #eee;
+  background-color: #eeeeee;
   border-radius: 4px;
 }
 nav a:visited, a:link {

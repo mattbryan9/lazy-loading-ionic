@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'contact', pathMatch: 'full' },
-  { path: 'heroes', loadChildren: './hero/hero.module#HeroModule' }
+  { path: 'heroes', loadChildren: '../shared/hero/hero.module#HeroModule' }
 ];
 
 @NgModule({
