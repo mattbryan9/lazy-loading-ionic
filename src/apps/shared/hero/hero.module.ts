@@ -13,13 +13,15 @@ import { HeroRoutingModule } from './hero-routing.module';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryDataService }  from './in-memory-data.service';
+import { IonicModule } from 'ionic-angular';
 
 @NgModule({
   imports: [
     SharedModule,
     HttpModule,
     HeroRoutingModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    IonicModule
   ],
   declarations: [
     HeroComponent,
